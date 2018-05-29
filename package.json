@@ -1,0 +1,23 @@
+{
+  "name": "node_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GagarinAP/node_test.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GagarinAP/node_test/issues"
+  },
+  "homepage": "https://github.com/GagarinAP/node_test#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
