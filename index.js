@@ -1,15 +1,16 @@
-var express = require('express')
-var app = express()
-var bodyParser = require('body-parser')
+import express from 'express'
+import bodyParser from 'body-parser'
+
+const app = express()
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
 	res.send({hello: 'Hello World'})
 })
 
-app.post('/', function (req, res) {
+app.post('/', (req, res) => {
 	res.json(req.body)
 })
 
