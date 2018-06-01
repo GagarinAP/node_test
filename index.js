@@ -1,21 +1,14 @@
 import express from 'express'
 import bodyParser from 'body-parser'
+import api from './api'
 
 const app = express()
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
+app.use('/api', api);
 
-app.get('/', (req, res) => {
-	res.send({hello: 'Hello World'})
-})
+app.get('/', (req, res) => res.send('API is running!'))
 
-app.get('/:id', (req, res) => {
-	res.send({params: req.params.id, query: req.query})
-})
-
-app.post('/', (req, res) => {
-	res.json(req.body)
-})
-
-app.listen(3000)
+app.listen(port)
