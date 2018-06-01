@@ -10,6 +10,10 @@ app.get('/', (req, res) => {
 	res.send({hello: 'Hello World'})
 })
 
+app.get('/:id', (req, res) => {
+	res.send({params: req.params.id, query: req.query})
+})
+
 app.post('/', (req, res) => {
 	res.json(req.body)
 })
