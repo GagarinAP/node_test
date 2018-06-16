@@ -1,5 +1,5 @@
-import {Router} from 'express';
-import {three} from './../../controllers';
+import { Router } from 'express';
+import { three } from './../../controllers';
 
 const threeRouter = Router();
 

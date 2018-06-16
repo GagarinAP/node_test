@@ -19,7 +19,8 @@
   "homepage": "https://github.com/GagarinAP/node_test#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "mongoose": "^5.1.5"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

@@ -1,5 +1,9 @@
 import { Router } from 'express';
-import {oneRouter,twoRouter,threeRouter} from './v1'
+import {
+		oneRouter,
+		twoRouter,
+		threeRouter
+} from './v1'
 
 const v1 = Router();
 
