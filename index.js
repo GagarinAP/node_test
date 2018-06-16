@@ -1,16 +1,15 @@
-var express = require('express')
-var app = express()
-var bodyParser = require('body-parser')
+import express from 'express'
+import bodyParser from 'body-parser'
+import api from './api'
+import db from './db'
+
+const app = express()
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use('/api', api);
 
-app.get('/', function (req, res) {
-	res.send({hello: 'Hello World'})
-})
+app.get('/', (req, res) => res.send('API is running!'))
 
-app.post('/', function (req, res) {
-	res.json(req.body)
-})
-
-app.listen(3000)
+app.listen(port)
